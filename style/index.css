@@ -61,22 +61,89 @@ body {
 }
 
 #button {
-    width: 60%;
+
+}
+#button-img {
+    position: fixed;
+    width: 50%;
     height: auto;
-    left: 12%;
+    left: 25%;
     bottom: 25%;
 }
 
-#button-out {
-
+#button-lines, #button-img {
+    animation: button-animation 3s infinite ease-in-out alternate-reverse;
+}
+@keyframes button-animation {
+    100%, 0 % {
+        opacity: 1;
+        transform: scale(1) rotate(0);
+    }
+    80% {
+        opacity: 0.8;
+        transform: scale(0.8) rotate(-4deg);
+    }
+    90% {
+        opacity: 1;
+        transform: scale(1.1) rotate(6deg);
+    }
 }
 
-#button-text {
-
+#button-lines {
+    position: fixed;
+    width: 15%;
+    height: 4%;
+    left: calc(10% - 8px);
+    bottom: 26%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
+#button-lines > span {
+    display: inline-block;
+    height: 2px;
+    background-color: white;
+    transform-origin: right;
+    position: relative;
+}
 
+#button-lines > span:nth-child(1) {
+    animation: button-line-animation 400ms infinite alternate-reverse;
+    width: 60%;
+    left: 40%;
+}
+#button-lines > span:nth-child(2) {
+    animation: button-line-animation 300ms infinite alternate-reverse;
+    animation-delay: 20ms;
+    width: 40%;
+    left: 60%;
+}
+#button-lines > span:nth-child(3) {
+    animation: button-line-animation 200ms infinite alternate-reverse;
+    animation-delay: 80ms;
+    width: 100%;
+}
 
+@keyframes button-line-animation {
+    0% { transform: scaleX(0.3) }
+    100% { transform: scaleX(1.3) }
+}
+
+/*TODO*/
+#circle-and-text {
+    width: 20vw;
+    height: 20vw;
+}
+#circle {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    border: 1px solid white;
+}
+#circle-and-text {
+    position: fixed;
+}
 
 
 canvas {
