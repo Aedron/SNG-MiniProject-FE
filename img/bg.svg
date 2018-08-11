@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1819px" height="3235px" viewBox="0 0 1819 3235" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>bg</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="101.999998%" y2="100.999999%" id="linearGradient-1">
+            <stop stop-color="#3023AE" offset="0%"></stop>
+            <stop stop-color="#C86DD7" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="iPhone-8">
+            <g id="bg" transform="translate(338.126787, 1794.693494) scale(-1, 1) rotate(-36.000000) translate(-338.126787, -1794.693494) translate(-2284.873213, -556.306506)">
+                <rect id="Rectangle-2" fill="#000000" transform="translate(2268.943118, 1869.430803) rotate(36.000000) translate(-2268.943118, -1869.430803) " x="1327.16124" y="251.930803" width="1883.56376" height="3235"></rect>
+                <rect id="Rectangle-2-Copy" fill="url(#linearGradient-1)" opacity="0.799497768" transform="translate(2884.361508, 2350.855829) rotate(35.000000) translate(-2884.361508, -2350.855829) " x="1171.70132" y="680.317529" width="3425.32038" height="3341.0766"></rect>
+                <path d="M0,2518.43374 C243.107105,2134.64774 469.175959,1984.69087 678.206563,2068.56313 C991.752469,2194.37151 701.906422,2552.06391 1369.11472,2729.76412 C2036.32302,2907.46432 979.256446,4002.17911 905.968964,2993.01385 C884.284471,2694.41938 549.032052,2994.84487 549.032052,2677.20587 C549.032052,2543.38237 366.021368,2490.45833 0,2518.43374 Z" id="Path" fill="url(#linearGradient-1)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

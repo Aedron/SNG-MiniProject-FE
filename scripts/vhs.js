@@ -1,5 +1,5 @@
 
-VHSify(document.getElementById('head-pic'));
+VHSify(document.getElementsByClassName('head-pic')[0]);
 
 function VHSify(image) {
     if (

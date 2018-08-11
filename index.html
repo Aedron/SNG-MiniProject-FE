@@ -8,14 +8,22 @@
     <title>Document</title>
     <link type="text/css" href="style/index.css" rel="stylesheet"/>
     <link type="text/css" href="style/vhs.css" rel="stylesheet"/>
+    <link type="text/css" href="style/text.css" rel="stylesheet"/>
 </head>
 <body>
 <div id="root">
+    <input id="input" type="file" accept="image/*" capture="camera">
+
     <img src="img/line.png"/>
     <div id="head">
-        <img id="head-line" src="img/photo-outline.png"/>
+        <img class="head-line1" id="head-line1-1" src="img/head-line1-1.svg"/>
+        <img class="head-line1" id="head-line1-2" src="img/head-line1-2.svg"/>
+        <img class="head-line1" id="head-line1-3" src="img/head-line1-3.svg"/>
+        <img class="head-line2" id="head-line2-1" src="img/head-line2-3.svg"/>
+        <img class="head-line2" id="head-line2-2" src="img/head-line2-3.svg"/>
+        <img class="head-line2" id="head-line2-3" src="img/head-line2-3.svg"/>
         <div id="head-container">
-            <img id="head-pic" src="img/head.png">
+            <img class="head-pic" src="img/head.png">
             <svg>
                 <filter id="r">
                     <feColorMatrix
@@ -43,7 +51,6 @@
             </div>
         </div>
     </div>
-    <img id="lines" src="img/lines.png"/>
     <div id="button">
         <div id="button-lines">
             <span></span>
@@ -54,19 +61,24 @@
     </div>
     <div id="circle-and-text">
         <div id="circle"></div>
-        <p id="circle-text">SEXY A·I·</p>
+        <p id="circle-text">S<br/>E<br/>X<br/>Y<br/><br/>A<br/>·<br/>I<br/>·</p>
     </div>
-    <!--<p id="text"></p>-->
-    <!--<input type="file" accept="image/*" id="ImgUpload" style="display:none"/>-->
-    <!--<button id="OpenImgUpload">Image Upload</button>-->
+    <div id="slogan">
+        专属情歌情话&nbsp;&nbsp;&nbsp;刷脸即可生成
+    </div>
+
+    <div id="text">
+        <div id="text1"></div>
+        <div id="text2"></div>
+        <div id="text3"></div>
+        <div id="text4"></div>
+        <div id="text5"></div>
+    </div>
 </div>
 
-<!--lib-->
-<!--<script type="text/javascript" src="lib/three.min.js" ></script>-->
-<!--<script type="text/javascript" src="lib/OrbitControls.js" ></script>-->
-
+<script type="text/javascript" src="scripts/utils.js"></script>
 <script type="text/javascript" src="scripts/index.js"></script>
 <script type="text/javascript" src="scripts/vhs.js"></script>
-<!--<script type="text/javascript" src="scripts/anim.js" ></script>-->
+<script type="text/javascript" src="scripts/upload.js"></script>
 </body>
 </html>

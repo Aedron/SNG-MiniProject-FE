@@ -3,12 +3,14 @@ const width = window.innerWidth;
 const height = window.innerHeight;
 
 const scene = new THREE.Scene();
+scene.background = new THREE.Color( 0xff0000 );
 const camera = new THREE.PerspectiveCamera(75, width/height, 0.1, 1000);
 
 camera.position.set(0, 5, 50);
 camera.lookAt(new THREE.Vector3(0, 0, 0));
 
-const renderer = new THREE.WebGLRenderer({ antialias: true });
+const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+renderer.setClearColor( 0xffffff, 0);
 renderer.setSize(width, height);
 renderer.setClearColor('white');
 renderer.shadowMap.enabled = true;
@@ -67,17 +69,13 @@ scene.add(firstLeaf);
 var inhale = true;
 
 function render() {
-
     if (sphere) {
         sphere.rotation.x += 0.005;
         sphere.rotation.y += 0.005;
         sphere.rotation.z += 0.005;
     }
-
     controls.update();
-
     breathe();
-
     renderer.render(scene, camera);
     requestAnimationFrame(render);
 }
@@ -96,13 +94,11 @@ function checkBreath() {
 
 function breathe() {
     checkBreath();
-
     if (inhale) {
         sphere.scale.x += inhaleTime;
         sphere.scale.y += inhaleTime;
         sphere.scale.z += inhaleTime;
     }
-
     else if (!inhale) {
         sphere.scale.x -= exhaleTime;
         sphere.scale.y -= exhaleTime;
@@ -111,5 +107,4 @@ function breathe() {
 }
 
 requestAnimationFrame(render);
-
-document.body.appendChild(renderer.domElement);
+document.getElementById('query-animation').appendChild(renderer.domElement);
