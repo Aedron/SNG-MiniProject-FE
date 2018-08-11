@@ -71,7 +71,15 @@ function uploadAndGetInfo(file) {
         method: 'POST',
         body: formData,
         mode: "cors",
-    }).then(console.log);
+    }).then((res) => {
+        console.log(res);
+        const timer = setInterval(() => {
+            if (window.ready) {
+                clearInterval(timer);
+                showResult();
+            }
+        }, 500);
+    });
 }
 
 
@@ -82,9 +90,26 @@ const text4 = document.getElementById('text4');
 const text5 = document.getElementById('text5');
 const texts = [text1, text2, text3, text4, text5];
 function updateQueryWord(step=1) {
-    if (step === 6) return;
+    if (step === 6) {
+        window.ready = true;
+        return;
+    }
     texts.map(i => i.className = `step${step}`);
     const randomIndex = Math.ceil(Math.random() * queryWords[step - 1].length) - 1;
     texts[step - 1].innerText = queryWords[step - 1][Math.max(randomIndex, 0)];
     setTimeout(() => updateQueryWord(step + 1), 1000 + Math.random() * 2000 );
+}
+
+
+function showResult() {
+    [
+        document.getElementById('head'),
+        document.getElementById('button'),
+        document.getElementById('slogan'),
+        document.getElementById('text'),
+        document.getElementsByClassName('vhs-filter')[0]
+    ].map(i => {
+        removeClass(i, 'query');
+        addClass(i, 'result');
+    });
 }
