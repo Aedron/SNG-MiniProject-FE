@@ -3,7 +3,7 @@ function hasClass(ele, cls) {
 }
 //为指定的dom元素添加样式
 function addClass(ele, cls) {
-    if (!this.hasClass(ele, cls)) ele.className += " " + cls;
+    if (!hasClass(ele, cls)) ele.className += " " + cls;
 }
 //删除指定dom元素的样式
 function removeClass(ele, cls) {
