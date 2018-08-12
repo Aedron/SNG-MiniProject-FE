@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1045px" height="292px" viewBox="0 0 1045 292" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 292 1637.7677 292 1637.7677 0 0 0"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="iPhone-8-Copy" transform="translate(-14.000000, -1136.000000)">
+            <g id="Group" transform="translate(-578.000000, 1136.000000)">
+                <g id="Group-28">
+                    <g id="Group-25">
+                        <path d="M660.451103,2.81853282 L593.169032,36.6409266" id="Stroke-1" stroke="#FFFFFF" stroke-width="5"></path>
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <g id="Clip-4"></g>
+                        <polygon id="Stroke-3" stroke="#FFFFFF" stroke-width="5" mask="url(#mask-2)" points="597.096537 289.181467 1571.11258 289.181467 1571.11258 36.6409266 597.096537 36.6409266"></polygon>
+                        <polyline id="Stroke-5" stroke="#FFFFFF" stroke-width="5" mask="url(#mask-2)" points="660.451103 36.6409266 660.451103 2.81853282 1634.46715 2.81853282 1634.46715 255.359073 1571.11179 255.359073"></polyline>
+                        <path d="M1634.46754,2.81853282 L1571.11218,36.6409266" id="Stroke-6" stroke="#FFFFFF" stroke-width="5" mask="url(#mask-2)"></path>
+                        <path d="M1634.46754,255.359073 L1571.11218,289.181467" id="Stroke-7" stroke="#FFFFFF" stroke-width="5" mask="url(#mask-2)"></path>
+                        <path d="M1634.46754,240.886584 L1571.11218,274.708978" id="Stroke-8" stroke="#FFFFFF" stroke-width="5" mask="url(#mask-2)"></path>
+                        <path d="M1634.46754,226.414094 L1571.11218,260.236488" id="Stroke-9" stroke="#FFFFFF" stroke-width="5" mask="url(#mask-2)"></path>
+                        <path d="M1634.46754,211.941605 L1571.11218,245.763998" id="Stroke-10" stroke="#FFFFFF" stroke-width="5" mask="url(#mask-2)"></path>
+                        <path d="M1634.46754,197.467988 L1571.11218,231.290381" id="Stroke-11" stroke="#FFFFFF" stroke-width="5" mask="url(#mask-2)"></path>
+                        <path d="M1634.46754,182.995498 L1571.11218,216.817892" id="Stroke-12" stroke="#FFFFFF" stroke-width="5" mask="url(#mask-2)"></path>
+                        <path d="M1634.46754,168.522896 L1571.11218,202.34529" id="Stroke-13" stroke="#FFFFFF" stroke-width="5" mask="url(#mask-2)"></path>
+                        <path d="M1634.46754,154.050406 L1571.11218,187.8728" id="Stroke-14" stroke="#FFFFFF" stroke-width="5" mask="url(#mask-2)"></path>
+                        <path d="M1634.46754,139.577917 L1571.11218,173.40031" id="Stroke-15" stroke="#FFFFFF" stroke-width="5" mask="url(#mask-2)"></path>
+                        <path d="M1634.46754,125.1043 L1571.11218,158.926693" id="Stroke-16" stroke="#FFFFFF" stroke-width="5" mask="url(#mask-2)"></path>
+                        <path d="M1634.46754,110.63181 L1571.11218,144.454204" id="Stroke-17" stroke="#FFFFFF" stroke-width="5" mask="url(#mask-2)"></path>
+                        <path d="M1634.46754,96.1593205 L1571.11218,129.981714" id="Stroke-18" stroke="#FFFFFF" stroke-width="5" mask="url(#mask-2)"></path>
+                        <path d="M1634.46754,81.6868309 L1571.11218,115.509225" id="Stroke-19" stroke="#FFFFFF" stroke-width="5" mask="url(#mask-2)"></path>
+                        <path d="M1634.46754,67.2143413 L1571.11218,101.036735" id="Stroke-20" stroke="#FFFFFF" stroke-width="5" mask="url(#mask-2)"></path>
+                        <path d="M1634.46754,52.7418517 L1571.11218,86.5642456" id="Stroke-21" stroke="#FFFFFF" stroke-width="5" mask="url(#mask-2)"></path>
+                        <path d="M1634.46754,38.2682347 L1571.11218,72.0906286" id="Stroke-22" stroke="#FFFFFF" stroke-width="5" mask="url(#mask-2)"></path>
+                        <path d="M1634.46754,23.7956324 L1571.11218,57.6180263" id="Stroke-23" stroke="#FFFFFF" stroke-width="5" mask="url(#mask-2)"></path>
+                    </g>
+                </g>
+                <text id="重新拍照" font-family="PingFangSC-Semibold, PingFang SC" font-size="174" font-weight="500" letter-spacing="55.1895561" fill="#FFFFFF">
+                    <tspan x="644.620888" y="231">重新拍照</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

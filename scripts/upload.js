@@ -1,39 +1,48 @@
 
-const IP = '134.175.179.95:80';
+const IP = '134.175.179.95';
 const queryWords = [
     [
         '五官扫描已就位...',
         '脸部定位开启中...',
-        '照片检测中，请稍候~',
-        '五官定位中，请稍候~'
+        '照片检测中...',
+        '五官定位中...'
     ],
     [
-        '叮当叮当，小爱正在努力解码中...',
-        '叮当叮当，颜值密码拼命解析中...',
-        '叮当叮当，脸部关键部位解析中...',
-        '叮当叮当，小爱正在解锁你的颜值密码...'
+        'AI正在努力解码中...',
+        '五官密码拼命解码中...',
+        '脸部关键部位解码中...',
+        '面部特征密码解码中...'
     ],
     [
         '你笑起来真像好天气',
         '你的眼睛好像让我迷了路',
+        '喂，幺幺灵吗？这里有人持靓行凶',
+        '你的眼睛真好看，里面有日月山川',
+        '生得如此好看，一定是上帝的杰作',
+        '天惹，你这么好看，AI已经被迷晕了',
+        '哇喔，如此颜值爆表，不如C位出道',
+        '哇喔，世间竟有如此出尘绝艳的容颜',
+        '今日第一颜值担当，不接受反驳',
+        '报告，AI已被高级脸迷倒，花痴中',
+        '居然有如此精致的容颜，安排!'
     ],
     [
         '正在生成你的爱情箴言',
-        '正在定位你的爱情命脉',
-        '正在解码你的爱情星相',
-        '正在解析你的爱情走势'
+        '正在解码你的爱情箴言',
     ],
     [
+        '专属歌曲生成中...',
         '专属歌曲匹配中...',
-        '专属旋律等你pick...',
-        '命运之歌正在赶来上...',
-        '个性好歌等你开启...'
+        '个性歌曲解析中...',
+        '个性歌曲解锁中...'
     ]
 ];
+let error = false;
 
 
 const upload = document.getElementById('input');
 const uploadButton = document.getElementById('button');
+let photo = null;
 uploadButton.addEventListener('click', () => {
     upload.click();
 });
@@ -44,7 +53,11 @@ upload.addEventListener('change', () => {
         const fr = new FileReader();
         fr.addEventListener('load', () => {
             Array.from(document.getElementsByClassName('head-pic'))
-                .map(img => { img.src = fr.result });
+                .map(img => {
+                    img.src = './img/b.png';
+                    img.style.backgroundImage = `url("${fr.result}")`;
+                });
+            photo = fr.result;
         });
         fr.readAsDataURL(upload.files[0]);
 
@@ -64,6 +77,7 @@ upload.addEventListener('change', () => {
 
 
 function uploadAndGetInfo(file) {
+    error = false;
     const formData  = new FormData();
     formData.append('file', file);
 
@@ -71,15 +85,23 @@ function uploadAndGetInfo(file) {
         method: 'POST',
         body: formData,
         mode: "cors",
-    }).then((res) => {
-        console.log(res);
-        const timer = setInterval(() => {
-            if (window.ready) {
-                clearInterval(timer);
-                showResult();
+    })
+        .then(res => res.json())
+        .then(res => {
+            const { song_path: path, gold_sentence: text, retcode } = res;
+            if (retcode === 0) {
+                const songPath = path.split('songs/')[1];
+                const song = songPath.split('.')[0];
+                const timer = setInterval(() => {
+                    if (window.ready) {
+                        clearInterval(timer);
+                        showResult({ song, text, path: songPath });
+                    }
+                }, 500);
+            } else {
+                showError();
             }
-        }, 500);
-    });
+        });
 }
 
 
@@ -89,7 +111,9 @@ const text3 = document.getElementById('text3');
 const text4 = document.getElementById('text4');
 const text5 = document.getElementById('text5');
 const texts = [text1, text2, text3, text4, text5];
+
 function updateQueryWord(step=1) {
+    if (error) return;
     if (step === 6) {
         window.ready = true;
         return;
@@ -97,19 +121,71 @@ function updateQueryWord(step=1) {
     texts.map(i => i.className = `step${step}`);
     const randomIndex = Math.ceil(Math.random() * queryWords[step - 1].length) - 1;
     texts[step - 1].innerText = queryWords[step - 1][Math.max(randomIndex, 0)];
-    setTimeout(() => updateQueryWord(step + 1), 1000 + Math.random() * 2000 );
+    const timeout = 1000 + Math.random() * 2000;
+    setTimeout(() => updateQueryWord(step + 1), timeout);
 }
 
 
-function showResult() {
+const audio = document.getElementById('song');
+function showResult({song, text, path}) {
+    [
+        document.getElementById('root'),
+        document.getElementById('result')
+    ].map(i => addClass(i, 'result'));
+    document.getElementById('result-text').innerText = text;
+    document.getElementById('player-name').innerText = song;
+    document.getElementById('result-img').style.backgroundImage = `url("${photo}")`;
+
+    audio.setAttribute('src', `http://${IP}/play/${path}`);
+    audio.addEventListener('canplay', () => {
+        audio.play()
+    }, false);
+
+    html2canvas(document.getElementById('result')).then(function(canvas) {
+        const dataUrl = canvas.toDataURL();
+        const img = document.createElement('img');
+        img.src = dataUrl;
+        img.className = 'save';
+        document.body.appendChild(img);
+    });
+}
+
+function showError() {
+    error = true;
+    addClass(document.getElementById('error'), 'show');
+    restart();
+}
+
+function restart() {
+    texts.map(i => {
+        i.className = '';
+        i.innerText = '';
+    });
     [
         document.getElementById('head'),
         document.getElementById('button'),
         document.getElementById('slogan'),
         document.getElementById('text'),
         document.getElementsByClassName('vhs-filter')[0]
-    ].map(i => {
-        removeClass(i, 'query');
-        addClass(i, 'result');
-    });
+    ].map(i => removeClass(i, 'query'));
+    Array.from(document.getElementsByClassName('head-pic'))
+        .map(img => {
+            img.src = './img/head.png';
+            img.style.backgroundImage = '';
+        });
 }
+
+document.getElementById('close-error')
+    .addEventListener('click', () => {
+        document.getElementById('error').className = '';
+    });
+const btn = document.getElementById('play-btn');
+btn.addEventListener('click', () => {
+    if (audio.paused) {
+        audio.play();
+        btn.src = 'img/pause.svg';
+    } else {
+        audio.pause();
+        btn.src = 'img/play.svg';
+    }
+});
