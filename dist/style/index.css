@@ -155,6 +155,10 @@ body {
     height: 100%;
 }
 
+.head-pic {
+    image-orientation: from-image;
+}
+
 #button {
     z-index: 10;
 }
