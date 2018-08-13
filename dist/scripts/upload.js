@@ -106,9 +106,9 @@ function showResult(_ref) {
     document.getElementById('result-img').style.backgroundImage = 'url("' + photo + '")';
 
     audio.setAttribute('src', 'http://' + IP + '/play/' + path);
-    audio.addEventListener('canplay', function () {
-        audio.play();
-    }, false);
+    // audio.addEventListener('canplay', () => {
+    //     audio.play();
+    // }, false);
 
     html2canvas(document.getElementById('result')).then(function (canvas) {
         var dataUrl = canvas.toDataURL();
