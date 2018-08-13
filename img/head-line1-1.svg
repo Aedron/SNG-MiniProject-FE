@@ -1,18 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="279px" height="279px" viewBox="0 0 279 279" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
-    <title>Stroke 11</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="iPhone-8" transform="translate(-431.000000, -405.000000)" stroke="#FFFFFF" stroke-width="4">
-            <g id="Group-2" transform="translate(322.000000, 288.000000)">
-                <g id="Group-14">
-                    <g id="Group-6" transform="translate(194.659436, 198.117188) rotate(-90.000000) translate(-194.659436, -198.117188) translate(-2.840564, 4.117188)">
-                        <polyline id="Stroke-11" points="2.27373675e-12 111 276.500835 111 276.500835 387.27907"></polyline>
-                    </g>
-                </g>
-            </g>
-        </g>
-    </g>
-</svg>
+<svg width="279" height="279" xmlns="http://www.w3.org/2000/svg"><path d="M2.66 278.617V2.117h276.279" stroke="#FFF" stroke-width="4" fill="none" fill-rule="evenodd"/></svg>
