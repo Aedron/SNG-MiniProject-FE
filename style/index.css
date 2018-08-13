@@ -415,6 +415,10 @@ body {
     position: relative;
     animation: error-image-animation 1s infinite;
 }
+body::after{
+    position:absolute; width:0; height:0; overflow:hidden; z-index:-1;
+    content: url("../img/error1.jpg") url("../img/error2.jpg");
+}
 @keyframes error-image-animation {
     0%, 50%, 100% {
         background-image: url("../img/error1.jpg");
