@@ -10,7 +10,7 @@ fs.mkdirSync(dist);
 fs.mkdirSync(path.join(dist, 'scripts'));
 
 
-['img', 'style', 'lib', 'index.html'].map(name => {
+['img', 'style', 'lib', 'meta', 'index.html'].map(name => {
     fs.copySync(
         path.join(__dirname, name),
         path.join(__dirname, 'dist', name)
